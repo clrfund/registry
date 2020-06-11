@@ -3,6 +3,7 @@ contract Registry {
   mapping(address => uint) public registrantIndex;
   address[] public registrants;
   event newRegistrant(address, uint, address);
+
   // Add any address provided as a parameter to the registry.
   function addRegistrant(address _registrant) public {
     if(registrantIndex[_registrant] != 0){
